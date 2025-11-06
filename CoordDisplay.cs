@@ -141,8 +141,8 @@ namespace CoordDisplay
         private void SetTextPosition()
         {
             var mousePos = Input.mousePosition;
-            Settings.X.SetValue((long)mousePos.x);
-            Settings.Y.SetValue((long)mousePos.y);
+            Settings.X.SetValueAndSave((long)mousePos.x);
+            Settings.Y.SetValueAndSave((long)mousePos.y);
 
             // ModHelper.Msg<CoordDisplay>($"Moved text to X: {Settings.X.GetValue()} Y: {Settings.Y.GetValue()}");
         }
