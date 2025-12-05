@@ -44,7 +44,7 @@ namespace CoordDisplay
         {
             base.OnUpdate();
 
-            if (!Settings.ModEnabled || !isInGame || InGame.instance?.inputManager == null)
+            if (!Settings.ModEnabled || !isInGame || InGame.instance?.InputManagers?.First() == null)
                 return;
 
             CreateUI();
@@ -149,7 +149,7 @@ namespace CoordDisplay
 
         private void UpdateText()
         {
-            var input = InGame.instance.inputManager;
+            var input = InGame.instance.InputManagers.First();;
             var placementModel = input.placementModel;
             if (placementModel == null)
             {
