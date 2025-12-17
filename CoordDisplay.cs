@@ -169,7 +169,7 @@ namespace CoordDisplay
             var towerPos = input.entityPositionWorld;
             var mousePos = Input.mousePosition;
 
-            var y = Settings.FlipY ? Screen.height - mousePos.y - 1 : mousePos.y;g
+            var y = Settings.FlipY ? Screen.height - mousePos.y - 1 : mousePos.y;
             
             coordText.text =
                 $"Mouse: ({mousePos.x}, {y})\n" +
