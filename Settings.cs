@@ -10,6 +10,11 @@ public class Settings : ModSettings
     {
         description = "Show the tower and mouse position while placing."
     };
+    
+    public static readonly ModSettingBool FlipY = new(false)
+    {
+        description = "When enabled, y=0 will be at the top of the screen instead of the bottom."
+    };
 
     public static readonly ModSettingBool LogPositions = new(false)
     {

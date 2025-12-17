@@ -38,6 +38,15 @@ namespace CoordDisplay
 
             isInGame = false;
             DestroyUI();
+
+            // ModHelper.Msg<CoordDisplay>("OnMatchEnded");
+        }
+
+        public override void OnRestart()
+        {
+            base.OnRestart();
+            
+            // ModHelper.Msg<CoordDisplay>("OnRestart");
         }
 
         public override void OnUpdate()
@@ -156,12 +165,14 @@ namespace CoordDisplay
                 coordText.enabled = false;
                 return;
             }
-
+            
             var towerPos = input.entityPositionWorld;
             var mousePos = Input.mousePosition;
+
+            var y = Settings.FlipY ? Screen.height - mousePos.y - 1 : mousePos.y;g
             
             coordText.text =
-                $"Mouse: ({mousePos.x}, {mousePos.y})\n" +
+                $"Mouse: ({mousePos.x}, {y})\n" +
                 $"Tower: ({towerPos.x}, {towerPos.y})";
 
             coordText.rectTransform.position = new Vector3(Settings.X, Settings.Y, 0);
