@@ -3,7 +3,7 @@ namespace CoordDisplay;
 public static class ModHelperData
 {
     public const string WorksOnVersion = "52.0";
-    public const string Version = "1.1.1";
+    public const string Version = "1.1.2";
     public const string Name = "CoordDisplay";
 
     public const string Description =
